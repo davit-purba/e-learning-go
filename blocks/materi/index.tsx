@@ -293,6 +293,7 @@ function NilaiGuru({ data }: { data: any[] }) {
             <div>
               <Link
               passHref
+              target="_blank"
               href={`/jawaban/${item.id}`}
               className="text-blue-600"
               >
