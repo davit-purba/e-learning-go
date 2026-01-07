@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Body */
+body {
+  @apply font-sans text-base;
+}
+
+/* Input */
+.input {
+  @apply border p-2 rounded outline-none focus:border-blue-500;
+}
+
+/* Navbar */
+.navbar {
+  @apply w-full flex items-center justify-between px-4 md:px-6 py-4 
+         bg-blue-600 backdrop-blur-md shadow-sm sticky top-0 z-50;
+}
+
+.bg_login {
+  @apply min-h-screen w-full bg-[url("/images/latar_login.jpg")] bg-cover bg-center bg-no-repeat;
+}
+
+/* Heading Pertemuan */
+.pertemuan-h2 {
+  @apply mt-4;
+}
+
+.pertemuan-subtitle {
+  @apply text-blue-600;
+}
+
+/* Backdrop */
+.back-drop {
+  @apply fixed inset-0 bg-black/70 flex h-screen w-full;
+}
+
+/* Side Drawer */
+.side-drawer {
+  @apply fixed top-0 left-0 shadow-2xl h-screen bg-white z-[999] flex flex-col 
+         -translate-x-full transition-transform duration-300 ease-out;
+}
+
+.side-drawer.show {
+  @apply translate-x-0;
+}
+
+/* Tombol close drawer */
+.side-drawer .close-drawer {
+  @apply p-1 mr-1 text-right border-none font-normal 
+         text-gray-600 transition-opacity;
+}
+
+.side-drawer .close-drawer:hover {
+  @apply opacity-80;
+}
+
+.side-drawer .close-drawer:focus {
+  @apply outline-none;
+}
+
+/* Item */
+.item {
+  @apply transition hover:bg-gray-100 hover:text-black;
+}
+
+/* Modal Backdrop */
+.modal-backdrop {
+  @apply fixed inset-0 bg-black/50  flex items-center 
+         justify-center z-[999] opacity-0 pointer-events-none 
+         transition-opacity duration-200 ease-in-out;
+}
+
+.modal-backdrop.show {
+  @apply opacity-100 pointer-events-auto;
+}
+
+/* Modal Center */
+.modal-center {
+  @apply bg-white  shadow-2xl overflow-hidden 
+         transform transition-all duration-300 scale-95 opacity-0;
+}
+
+.modal-center.show {
+  @apply scale-100 opacity-100;
+}
+
+/* Modal Header */
+.modal-header {
+  @apply px-3 py-3 border-b flex justify-between items-center;
+}
+
+.modal-title {
+  @apply text-lg font-semibold;
+}
+
+/* Modal Body */
+.modal-body {
+  @apply p-5 space-y-4 overflow-y-auto;
+}
+
+/* Modal Footer */
+.modal-footer {
+  @apply px-5 py-3 border-t flex justify-end gap-2;
+}
+
+/* Close Button */
+.modal-close-btn {
+  @apply text-gray-500 hover:text-gray-900 transition p-1;
+}
+
+/* Background stripes */
+.bg-blue-stripes {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #3b82f6 0px,
+    #3b82f6 2px,
+    transparent 2px,
+    transparent 10px
+  );
+}
